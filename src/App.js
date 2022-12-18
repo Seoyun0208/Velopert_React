@@ -1,10 +1,15 @@
 import './App.css';
+import { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+class App extends Component {
+  render(){
+    const name = 'react';
+    return (
+      <div className="react">
+        {name}
+      </div>
+    );
+  }
 }
 
 export default App;
