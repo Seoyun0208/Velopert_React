@@ -2,7 +2,8 @@ import './App.css';
 // import MyComponent from './components/MyComponent';
 // import Counter from './components/Counter';
 // import Say from './components/Say';
-import EventPractice from './components/EventPractice';
+// import EventPractice from './components/EventPractice';
+import ValidationSample from './components/ValidationSample';
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       {/* <MyComponent title="favoriteNumber = 2" favoriteNumber={2}/> */}
       {/* <Counter/> */}
       {/* <Say/> */}
-      <EventPractice/>
+      {/* <EventPractice/> */}
+      <ValidationSample/>
     </>
   );
 };
