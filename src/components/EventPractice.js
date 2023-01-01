@@ -1,58 +1,54 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class EventPractice extends Component {
+const EventPractice = () => {
 
-    state = {
-        username: '',
-        message: ''
+    const [username, setUsername] = useState('');
+    const [message, setMessage] = useState('');
+
+    const onChangeUsername = e => setUsername(e.target.value);
+    const onChangeMessage = e => setMessage(e.target.value);
+
+    const onClick = () => {
+        alert(username + ': ' + message);
+        setUsername('');
+        setMessage('');
     }
 
-    handleChange = (e) => {
-        this.setState({ [e.target.name]: e.target.value });
-    }
-
-    handleClick = (e) => {
-        alert(this.state.username + ': ' + this.state.message);
-        this.setState({ username: '', message: '' });
-    }
-
-    handleKeyUp = (e) => {
+    const onKeyUp = e => {
         if (e.key === 'Enter') {
-            this.handleClick();
+            onClick();
         }
     }
 
-    render() {
-        return (
-            <div>
-                <h1>이벤트 연습</h1>
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: 400
-                }}>
-                    <input
-                        type="text"
-                        name='username'
-                        placeholder='아무거나 입력해보세요!'
-                        value={this.state.username}
-                        onChange={this.handleChange}
-                    />
-                    <input
-                        type="text"
-                        name='message'
-                        placeholder='아무거나 입력해보세요!'
-                        value={this.state.message}
-                        onChange={this.handleChange}
-                        onKeyUp={this.handleKeyUp}
-                    />
-                    <button
-                        onClick={this.handleClick}
-                    >확인</button>
-                </div>
+    return (
+        <div>
+            <h1>이벤트 연습</h1>
+            <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                width: 400
+            }}>
+                <input
+                    type="text"
+                    name='username'
+                    placeholder='아무거나 입력해보세요!'
+                    value={username}
+                    onChange={onChangeUsername}
+                />
+                <input
+                    type="text"
+                    name='message'
+                    placeholder='아무거나 입력해보세요!'
+                    value={message}
+                    onChange={onChangeMessage}
+                    onKeyUp={onKeyUp}
+                />
+                <button
+                    onClick={onClick}
+                >확인</button>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default EventPractice;
