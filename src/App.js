@@ -5,7 +5,8 @@ import { Component } from 'react';
 // import Say from './components/Say';
 // import EventPractice from './components/EventPractice';
 // import ValidationSample from './components/ValidationSample';
-import ScrollBox from './components/ScrollBox';
+// import ScrollBox from './components/ScrollBox';
+import IterationSample from './components/IterationSample';
 
 class App extends Component {
   render() {
@@ -19,8 +20,9 @@ class App extends Component {
         {/* <Say/> */}
         {/* <EventPractice/> */}
         {/* <ValidationSample/> */}
-        <ScrollBox ref={ref => this.scrollBox = ref} />
-        <button onClick={() => this.scrollBox.scrollToBottom()}>맨밑으로</button>
+        {/* <ScrollBox ref={ref => this.scrollBox = ref} />
+        <button onClick={() => this.scrollBox.scrollToBottom()}>맨밑으로</button> */}
+        <IterationSample />
       </>
     );
   }
