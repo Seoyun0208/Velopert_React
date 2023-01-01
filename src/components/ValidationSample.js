@@ -3,10 +3,8 @@ import '../style/ValidationSample.css';
 
 class ValidationSample extends Component {
 
-    input = React.createRef();
-
     handleFocus = () => {
-        this.input.current.focus();
+        this.input.focus();
     }
 
     state = {
@@ -39,7 +37,7 @@ class ValidationSample extends Component {
                     width: 240
                 }}>
                     <input
-                        ref={this.input}
+                        ref={ref => this.input = ref}
                         type="password"
                         value={this.state.password}
                         onChange={this.handleChange}
