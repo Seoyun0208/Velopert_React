@@ -6,17 +6,19 @@ class EventPractice extends Component {
         message: ''
     }
 
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleClick = this.handleClick.bind(this);
-    }
+    // ! 생성자 메서드에서 메서드 바인딩하는 대신 
+    // ! 바벨의 transform-class-properties 문법 사용, 화살표 함수 형태로 메서드 정의하면 훨씬 편리
+    // constructor(props) {
+    //     super(props);
+    //     this.handleChange = this.handleChange.bind(this);
+    //     this.handleClick = this.handleClick.bind(this);
+    // }
 
-    handleChange(e) {
+    handleChange = (e) => {
         this.setState({ message: e.target.value });
     }
 
-    handleClick(e) {
+    handleClick = (e) => {
         alert(this.state.message);
         this.setState({ message: '' });
     }
