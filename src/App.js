@@ -10,8 +10,9 @@ import { Component } from 'react';
 // import LifeCycleSample from './components/LifeCycleSample';
 // import ErrorBoundary from './components/ErrorBoundary';
 // import Counter from './components/hooks/Counter';
-import Info from './components/hooks/Info';
+// import Info from './components/hooks/Info';
 // import Counter2 from './components/hooks/Counter2';
+import Average from './components/hooks/Average';
 
 // function getRandomColor() {
 //   return '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -46,8 +47,9 @@ class App extends Component {
           <LifeCycleSample color={this.state.color} />
         </ErrorBoundary> */}
         {/* <Counter /> */}
-        <Info />
+        {/* <Info /> */}
         {/* <Counter2 /> */}
+        <Average />
       </>
     );
   }
