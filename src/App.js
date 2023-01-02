@@ -7,22 +7,24 @@ import { Component } from 'react';
 // import ValidationSample from './components/ValidationSample';
 // import ScrollBox from './components/ScrollBox';
 // import IterationSample from './components/IterationSample';
-import LifeCycleSample from './components/LifeCycleSample';
-import ErrorBoundary from './components/ErrorBoundary';
+// import LifeCycleSample from './components/LifeCycleSample';
+// import ErrorBoundary from './components/ErrorBoundary';
+// import Counter from './components/hooks/Counter';
+import Info from './components/hooks/Info';
 
-function getRandomColor() {
-  return '#' + Math.floor(Math.random() * 16777215).toString(16);
-}
+// function getRandomColor() {
+//   return '#' + Math.floor(Math.random() * 16777215).toString(16);
+// }
 
 class App extends Component {
 
-  state = {
-    color: '#000000'
-  }
+  // state = {
+  //   color: '#000000'
+  // }
 
-  handleClick = () => {
-    this.setState({ color: getRandomColor() });
-  }
+  // handleClick = () => {
+  //   this.setState({ color: getRandomColor() });
+  // }
 
   render() {
     return (
@@ -38,10 +40,12 @@ class App extends Component {
         {/* <ScrollBox ref={ref => this.scrollBox = ref} />
         <button onClick={() => this.scrollBox.scrollToBottom()}>맨밑으로</button> */}
         {/* <IterationSample /> */}
-        <button onClick={this.handleClick}>랜덤 색상</button>
+        {/* <button onClick={this.handleClick}>랜덤 색상</button>
         <ErrorBoundary>
           <LifeCycleSample color={this.state.color} />
-        </ErrorBoundary>
+        </ErrorBoundary> */}
+        {/* <Counter /> */}
+        <Info />
       </>
     );
   }
