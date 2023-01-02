@@ -11,6 +11,7 @@ import { Component } from 'react';
 // import ErrorBoundary from './components/ErrorBoundary';
 // import Counter from './components/hooks/Counter';
 import Info from './components/hooks/Info';
+// import Counter2 from './components/hooks/Counter2';
 
 // function getRandomColor() {
 //   return '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -46,6 +47,7 @@ class App extends Component {
         </ErrorBoundary> */}
         {/* <Counter /> */}
         <Info />
+        {/* <Counter2 /> */}
       </>
     );
   }
